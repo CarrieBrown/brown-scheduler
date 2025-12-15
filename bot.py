@@ -1,9 +1,17 @@
 import discord
 from discord.ext import commands
 from datetime import datetime
+import sys
 
-with open("token.txt", "r") as f:
+if len(sys.argv) < 2
+    print("Usage: python bot.py <token_file>")
+    sys.exit(1)
+
+token_file = sys.argv[1]
+
+with open(token_file, "r") as f:
    TOKEN = f.read().strip()
+
 CLAIMER_ROLE = "Claimer"
 
 intents = discord.Intents.default()
